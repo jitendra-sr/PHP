@@ -1,5 +1,3 @@
-<?php
-    
     INT(11) UNSIGNED // 0 to 4294967295
     BIGINT(20)
     FLOAT(10,2)
@@ -37,5 +35,3 @@
     select name, email from users where id = 1;
     select * from users where name like '%John%';
     select users.name, comments.comment_text from users inner join comments on users.id = comments.users_id where users.id = 1;
-
-?>
