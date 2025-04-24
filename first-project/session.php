@@ -1,4 +1,6 @@
 <?php
+
+/*
 session_start(); // Start the session
 $_SESSION["username"] = "JohnDoe"; // Set a session variable
 
@@ -6,9 +8,10 @@ $_SESSION["username"] = "JohnDoe"; // Set a session variable
 
 // unset($_SESSION["username"]); // Unset the session variable
 // session_unset(); // Unset all session variables
+// session_destroy(); // Destroy the session and all session variables
 
-session_destroy(); // Destroy the session and all session variables
-// It is important to note that session_destroy() does not unset the $_SESSION variable. It only destroys the session data on the server. The $_SESSION variable will still exist on the page it started, but it will be empty to other pages. To unset the $_SESSION variable regardless of page, you can use unset($_SESSION) or session_unset().
+// Note: It is important to note that session_destroy() does not unset the $_SESSION variable. It only destroys the session data on the server. The $_SESSION variable will still exist on the page it started, but it will be empty to other pages. To unset the $_SESSION variable regardless of page, you can use unset($_SESSION) or session_unset().
+*/
 
 require_once 'config.php'; // Session with security settings
 
@@ -23,7 +26,7 @@ require_once 'config.php'; // Session with security settings
 </head>
 <body>
     <?php
-    echo "<h1>Session started</h1>";
+    echo "<h3>Session started</h3>";
     echo "<p>Username: " . $_SESSION["username"] . "</p>"; // Access the session variable
     ?>
 </body>

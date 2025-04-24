@@ -12,6 +12,7 @@ session_set_cookie_params([
     'httponly' => true, // Cookie is not accessible via JavaScript (helps prevent XSS attacks)
 ]);
 session_start(); // Start the session
+$_SESSION["username"] = "JohnDoe";
 
 if(!isset($_SESSION['last_regeneration'])) {
     session_regenerate_id(true); // Regenerate the session ID for the first time
